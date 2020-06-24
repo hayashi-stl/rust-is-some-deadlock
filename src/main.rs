@@ -66,6 +66,10 @@ impl Drop for Resource {
                 cache.drop_resource();
                 println!("Dropped from the cache");
             }
+            // BONUS!
+            // Adding a statement here, even if it doesn't use `cache`,
+            // deadlocks even with Some(_)
+            // println!("Get rekt");
         }
     }
 }
